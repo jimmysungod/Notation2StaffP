@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <title>簡譜轉五線譜</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/1.2.93/vexflow-min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmidgen/0.1.5/jsmidgen.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/midijs@0.3.0/midi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.min.js"></script>
 </head>
 <body>
     <h1>簡譜轉五線譜</h1>
@@ -30,9 +29,9 @@
         <option value="Cb">Cb 大調</option>
     </select>
     <br>
-    <button onclick="convertJianpu()">轉換並播放</button>
+    <button onclick="convertJianpu()">轉換</button>
     <div id="output"></div>
-    <a id="downloadLink" href="#" download="output.mid">下載 MIDI</a>
+    <button onclick="playMIDI()">播放MIDI</button>
 
     <script src="script.js"></script>
 </body>
