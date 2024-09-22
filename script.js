@@ -20,7 +20,7 @@ function convertJianpu() {
     const formatter = new VF.Formatter().joinVoices([voice]).format([voice], 400);
     voice.draw(context, stave);
 
-    // 生成 MIDI
+    // 生成 MIDI 並播放
     generateMIDI(jianpuInput, keySignature);
 }
 
@@ -109,4 +109,7 @@ function generateMIDI(jianpu, keySignature) {
 
     const downloadLink = document.getElementById('downloadLink');
     downloadLink.href = url;
+
+    // 使用 MIDI.js 播放生成的 MIDI 文件
+    MIDIjs.play(url);
 }
