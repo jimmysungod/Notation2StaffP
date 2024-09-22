@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>簡譜轉五線譜</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vexflow/1.2.93/vexflow-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmidgen/0.1.5/jsmidgen.min.js"></script>
+</head>
+<body>
+    <h1>簡譜轉五線譜</h1>
+    <textarea id="jianpuInput" rows="10" cols="50" placeholder="輸入簡譜..."></textarea>
+    <br>
+    <label for="keySignature">選擇調號：</label>
+    <select id="keySignature">
+        <option value="C">C 大調</option>
+        <option value="G">G 大調</option>
+        <option value="D">D 大調</option>
+        <option value="A">A 大調</option>
+        <option value="E">E 大調</option>
+        <option value="B">B 大調</option>
+        <option value="F#">F# 大調</option>
+        <option value="C#">C# 大調</option>
+        <option value="F">F 大調</option>
+        <option value="Bb">Bb 大調</option>
+        <option value="Eb">Eb 大調</option>
+        <option value="Ab">Ab 大調</option>
+        <option value="Db">Db 大調</option>
+        <option value="Gb">Gb 大調</option>
+        <option value="Cb">Cb 大調</option>
+    </select>
+    <br>
+    <button onclick="convertJianpu()">轉換</button>
+    <div id="output"></div>
+    <a id="downloadLink" href="#" download="output.mid">下載 MIDI</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
